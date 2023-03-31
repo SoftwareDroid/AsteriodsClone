@@ -1,0 +1,66 @@
+### Anforderungen Asteriods
+Prioritäten: Niedrig, Mittel, Hoch 
+
+Hoch := Wird umbedingt benötigt
+Mittel := Nötig aber weglassabr um, das Spiel zu spielen
+Niedirg := Zusatzzeug (Sound, Animationen, Texte, ...)
+
+1. Startbildschirm
+Beschreibung: Der Startbildschirm zeigt ein Spielszene mit Asterioden und Saucers, bevor das Spiel losgeht. Durch Drücken von Tasten wird dann das Spiel gestartet.
+7.1 Rendern (Niedrig)
+7.2 Warten auf Tastendruck (Mittel)
+2. Raumschiff
+Beschreibung: Der Anwender steuert ein kleines Raumschiff. Die möglichen Aktionen sind feuern, rotieren, Hyperspace (Teleport) und beschleunigen.
+2.0 Rendern
+Priorität:  Hoch
+2.1 Steuerung durch Tasten
+2.2.1 Rotieren
+Priorität: Hoch
+Beschreibung: Der Spieler rotiert das Raumschiff mit zwei verschiedenen Tasten
+2.2 Schießen
+Priorität: Hoch
+Beschreibung: Das herunterdrücken der Feuertaste erzeugt ein Geschoss. Dieses bewegt sich mit einer konstanten Geschwindigkeit vorwärts.
+2.1.3 Hyperspace
+Priorität: Mittel
+Beschreibung: Teloptiert Raumschiff auf eine zufällige Position im Spiel. Es kann dabei mit Asteriodenn kollidieren
+2.6 Thrust
+Priorität: Hoch
+Beschreibung: Beschleunigt das Raumschiff bis zu einer maximale Geschwindigkeit. Das Raumschiff wird leicht gebremst, wenn die Antriebstaste nicht gedrückt ist.
+Wird langsam mit der Zeit schwächer. Dieser hat auch ein Animation in Form eines kleinen Dreickes.
+2.6.1Beschleunigen
+Priorität: Hoch
+2.6.2 Animation beim Beschleunigen
+Priorität: Niedrig
+3. Sound Ausgabe
+Priorität: Mittel
+Beschreibung: Fire Sound Effect, Large Flying Saucer, Small Flying Saucem Thrust Sound Effect, Small Explosion, Medium Explosion, Large Explosion, Extra Player,Wavy Beat 1,Wavy Beat 2
+4. Spielstandanzeige 
+Priorität: Mittel
+Beschreibung: Anzeigen der verbleibenden Leben, Punkte usw.
+4.1 Leben (Niedrig)
+4.2 Punkte (Niedrig)
+5. Asteroiden
+Beschreibung: Es gibt die Asteridoen in drei verschiedenen Größen (Groß, Mittel und klein). Jeder Bewegt sich mit einer anderen Geschwidkeit. Die größere Stufe verfällt in zwei kleiner es seidenn es gibt schon 26 dann in nur einen.
+5.1 Rendern
+Priorität: Hoch
+5.2 Bewegung 
+Priorität: Hoch
+Beschreibung: Fortbeweung mit einer konstanten Geschindigkeit. Die Bewegung geht dabei über die Spielfeldränder.
+5.3 Aufteilen 
+Priorität: Mittel
+Bechreibung: Große Aterioden werden in zwei mittlere aufgeteilt und mittlere in zwei kleinere. Hierbei gilt, dass es in Asteriods ein maximale Obergrenze an Asterioden gibt. Beim Überschreiten dieser Grenze, werden Asterioden nur in einen Asterioden der kleineren Stufe aufgeteilt.
+5. Explosionseffekt
+Priorität: Niedrig
+6. Saucer
+Beschreinbung: Diese kleinen Raumschiffe welche Schießen. Winkel ist bei andern Variante kleiner
+6.1 Rendern (Mittel)
+6.2 Schießen (Hoch)
+6.3 Flugbahnändern (Mittel)
+
+6. Spielfeld 
+- Wrapping (Hoch)
+	
+### Sonstiges
+Nach dem spielstart joint der Spieler nach 2s
+Saucer schießt auch etwas alle 2s
+Zerfallen ist wahrscheinlich komplett zufällig
